@@ -45,15 +45,3 @@
             <td>Universitas Sumatera Utara</td>
         </tr>
     </table>
-        
-    <h4>Halaman lain</h4>
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="contact-us.html">Contact Us</a>
-        </li>
-    </ul>
-</body>
-</html>
