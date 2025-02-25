@@ -12,7 +12,6 @@
     <a href="https://library.usu.ac.id/"<perpustakaan usu>
     </body>
     </html><!--akhir dokumen HTML-->
-    !DOCTYPE html>
 <html library.usu.ac.id="en">
 <head>
     <meta charset="UTF-8">
