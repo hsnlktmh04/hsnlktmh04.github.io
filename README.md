@@ -13,7 +13,7 @@
     </body>
     </html><!--akhir dokumen HTML-->
     !DOCTYPE html>
-<html lang="en">
+<html library.usu.ac.id="en">
 <head>
     <meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,11 +26,11 @@
         <tr>
             <!-- td = tabel data -->
             <td><b>Nama</b></td>
-            <td>Bambang Sugiarto</td>
+            <td>HUSNUL KHATIMAH</td>
         </tr>
         <tr>
             <td>NIM</td>
-            <td>220709007</td>
+            <td>220709030</td>
         </tr>
         <tr>
             <td>Program Studi</td>
