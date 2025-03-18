@@ -3,51 +3,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Diri</title>
+    <title>Husnul Libarary</title>
     <style>
-        body { font-family: Arial, sans-serif; text-align: center; padding: 50px; }
-        table { margin: 0 auto; border-collapse: collapse; width: 50%; }
-        th, td { padding: 12px; text-align: left; border: 1px solid #ddd; }
-        th { background-color: #4CAF50; color: white; }
-        td { background-color: #f9f9f9; }
+body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #eef2ff;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        header, footer {
+            background-color: #6d28d9;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            transition: all 0.3s;
+        }
+        nav a:hover {
+            background-color: #facc15;
+            color: black;
+        }
+        .container {
+            width: 70%;
+            background-color: white;
+            margin: 50px auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h2 {
+            color: #6d28d9;
+        }
+        p {
+            text-align: justify;
+            color: #333;
+            line-height: 1.8;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .button-container a {
+            background-color: #6d28d9;
+            color: white;
+            padding: 14px 28px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        .button-container a:hover {
+            background-color: #facc15;
+            color: black;
+        }
+        /* Dark Mode Styles */
+        .dark-mode {
+            background-color: #1a1a2e;
+            color: white;
+        }
+        .dark-mode .container {
+            background-color: #16213e;
+            color: white;
+        }
+        .dark-mode header, .dark-mode footer {
+            background-color: #100d40;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Biodata Diri</h1>
+<header>
+    <nav>
+        <a href="index.html">Homepage</a>
+        <a href="aboutme">About</a>
+        <a href="contact us.html">Masukan</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h3>Informasi Pribadi</h3>
     <table>
         <tr>
             <th>Nama</th>
             <td>husnul khatimah</td>
         </tr>
         <tr>
-            <th>nim</th>
+            <th>NIM</th>
             <td>220709030</td>
         </tr>
         <tr>
-            <th>prodi/th>
-            <td>perpustakaan dan sains informasi</td>
+            <th>Program Studi</th>
+            <td>Perpustakaan dan Sains Informasi</td>
         </tr>
         <tr>
-            <th>fakultas</th>
-            <td>ilmu budaya</td>
+            <th>Fakultas</th>
+            <td>Fakultas Ilmu Budaya</td>
         </tr>
         <tr>
-            <th>universitas</th>
-            <td>universitas sumatera utara</td>
+            <th>Semester</th>
+            <td>6</td>
+        </tr>
+        <tr>
+            <th>Universitas</th>
+            <td>Universitas Sumatera Utara</td>
         </tr>
     </table>
+</div>
 
-      <h4>Menu</h4> 
-    <ul>
-        <Ii>
-            <a href="aboutme.html">Tentang Saya</a><br>
-            <a href="contac us.html">Kritik dan saran</a><br>
-        </Ii>
-        <Ii>
-            <a href="index.html">Halaman Utama</a><br>
-        </Ii>
-    
-    </ul>
+<footer>
+    &copy; 2025 Husnul Library
+</footer>
+
 </body>
 </html>
