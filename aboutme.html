@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Husnul Libarary</title>
+    <title>Husnul Library</title>
     <style>
-body {
+        body {
             font-family: 'Poppins', sans-serif;
             background-color: #eef2ff;
             margin: 0;
@@ -51,30 +51,22 @@ body {
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
             text-align: center;
         }
-        h2 {
+        h3 {
             color: #6d28d9;
         }
-        p {
-            text-align: justify;
-            color: #333;
-            line-height: 1.8;
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
-        .button-container {
-            margin-top: 30px;
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
         }
-        .button-container a {
+        th {
             background-color: #6d28d9;
             color: white;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        .button-container a:hover {
-            background-color: #facc15;
-            color: black;
         }
         /* Dark Mode Styles */
         .dark-mode {
@@ -85,7 +77,29 @@ body {
             background-color: #16213e;
             color: white;
         }
+        .dark-mode table {
+            color: white;
+            border-color: white;
+        }
         .dark-mode header, .dark-mode footer {
+            background-color: #100d40;
+        }
+        /* Dark Mode Button */
+        #darkModeToggle {
+            background-color: #6d28d9;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            transition: all 0.3s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        #darkModeToggle:hover {
             background-color: #100d40;
         }
     </style>
@@ -93,10 +107,11 @@ body {
 <body>
 
 <header>
+    <h1>Husnul Library</h1>
     <nav>
         <a href="index.html">Homepage</a>
-        <a href="aboutme">About</a>
-        <a href="contact us.html">Masukan</a>
+        <a href="aboutme.html">About</a>
+        <a href="contact.html">Masukan</a>
     </nav>
 </header>
 
@@ -105,7 +120,7 @@ body {
     <table>
         <tr>
             <th>Nama</th>
-            <td>husnul khatimah</td>
+            <td>Husnul Khatimah</td>
         </tr>
         <tr>
             <th>NIM</th>
