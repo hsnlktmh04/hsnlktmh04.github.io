@@ -8,7 +8,7 @@
     body {
       font-family: Arial, sans-serif;
       margin: 0;
-      background-color:  #100d40;
+      background-color: #100d40;
     }
     nav {
       background-color: #1e90ff;
@@ -86,7 +86,13 @@
     </table>
 
     <h3>Link</h3>
-    <p>Klik <a href="https://www.usu.ac.id" target="_blank">di sini</a> untuk ke situs Universitas Sumatera Utara.</p>
+    <p>
+      Klik 
+      <a href="https://www.usu.ac.id" target="_blank" style="color: #1e90ff; font-weight: bold;">
+        di sini
+      </a> 
+      untuk ke situs Universitas Sumatera Utara.
+    </p>
   </div>
 
   <footer>
