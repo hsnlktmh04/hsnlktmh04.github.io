@@ -1,274 +1,297 @@
 <!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Husnul Library</title>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Husnul</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #eef2ff;
-            margin: 0;
-            padding: 0;
-            transition: background 0.3s, color 0.3s;
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      .transition-smooth {
+        transition: all 0.3s ease-in-out;
+      }
+
+      .shadow-md-smooth {
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .hover-scale-up:hover {
+        transform: scale(1.03);
+      }
+
+      /* Fade In Animation */
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-out forwards;
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
         }
-        header, footer {
-            background-color: #6d28d9;
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-radius: 0 0 20px 20px;
+      }
+
+      /* Slide Up Animation */
+      .slide-up {
+        transform: translateY(20px);
+        opacity: 0;
+        animation: slideUp 0.6s ease-out forwards;
+      }
+
+      @keyframes slideUp {
+        to {
+          transform: translateY(0);
+          opacity: 1;
         }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-        }
-        nav {
-            display: flex;
-            gap: 15px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 12px 20px;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            transition: all 0.3s;
-        }
-        nav a:hover {
-            background-color: #facc15;
-            color: black;
-        }
-        .container {
-            width: 70%;
-            background-color: white;
-            margin: 50px auto;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        h2 {
-            color: #6d28d9;
-        }
-        p {
-            text-align: justify;
-            color: #333;
-            line-height: 1.8;
-        }
-        .button-container {
-            margin-top: 30px;
-        }
-        .button-container a {
-            background-color: #6d28d9;
-            color: white;
-            padding: 14px 28px;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        .button-container a:hover {
-            background-color: #facc15;
-            color: black;
-        }
-        /* Dark Mode Styles */
-        .dark-mode {
-            background-color: #1a1a2e;
-            color: white;
-        }
-        .dark-mode .container {
-            background-color: #16213e;
-            color: white;
-        }
-        .dark-mode header, .dark-mode footer {
-            background-color: #100d40;
-        }
-        /* Dark Mode Button */
-        #darkModeToggle {
-            background-color: #6d28d9;
-            color: white;
-            border: none;
-            padding: 12px 18px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: bold;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            transition: all 0.3s;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        }
-        #darkModeToggle:hover {
-            background-color: #100d40;
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
 
-<header>
-    <h1>Husnul Library</h1>
-    <nav>
-        <a href="index.html">Homepage</a>
-        <a href="aboutme.html">About</a>
-        <a href="contac us.html">Masukan</a>
-    </nav>
-</header>
+  <body class="bg-gray-100 text-gray-900">
+    <header class="bg-blue-900 text-white shadow relative z-50">
+      <div class="container mx-auto p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Digital Library</h1>
 
-<div class="container">
-    <h2>Selamat Datang di Husnul Library!</h2>
-    <p>Halo! Saya adalah mahasiswa Program Studi Ilmu Perpustakaan dan Sains Informasi di Universitas Sumatera Utara. Website ini dibuat sebagai bagian dari pemenuhan tugas Mata Kuliah Pengembangan Web. Melalui proyek ini, saya berusaha untuk mengasah keterampilan dalam pengembangan website, terutama dalam hal desain, fungsionalitas, dan pengalaman pengguna agar lebih interaktif dan informatif.
+        <nav class="hidden md:flex gap-6 font-medium">
+          <a href="index.html" class="hover:text-teal-300 transition-smooth"
+            >Home</a
+          >
+          <a href="borrow.html" class="hover:text-teal-300 transition-smooth"
+            >Borrow</a
+          >
+          <a href="about.html" class="hover:text-teal-300 transition-smooth"
+            >About</a
+          >
+          <a href="contack.html" class="hover:text-teal-300 transition-smooth"
+            >Contact</a
+          >
+          <a href="homework.html" class="hover:text-teal-300 transition-smooth"
+            >Homework</a
+          >
+        </nav>
 
-Saya berharap website ini tidak hanya menjadi tugas akademik semata, tetapi juga dapat menjadi media pembelajaran yang bermanfaat. Ke depannya, saya ingin terus mengembangkan dan menyempurnakan website ini agar dapat memberikan nilai tambah serta pengalaman yang lebih baik bagi para penggunanya.</p>
-    <div class="button-container">
-        <a href="https://library.usu.ac.id/" target="_blank">Kunjungi Perpustakaan USU</a>
-    </div>
-</div>
- <div>
-    <h3>Berikan Ulasan Anda:</h3>
-    <textarea id="review" placeholder="Tulis ulasan Anda..."></textarea>
-    <button onclick="submitReview()">Kirim</button>
-    <div id="reviews"></div>
-     <br>
-<footer>
-    &copy; 2025 Husnul Library
-</div>
+        <button
+          id="menu-toggle"
+          class="md:hidden focus:outline-none transition-smooth"
+        >
+          <svg
+            id="menu-icon"
+            class="w-6 h-6 fill-current text-white transition-transform duration-300"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"
+            />
+          </svg>
+        </button>
+      </div>
 
-</footer>
+      <nav
+        id="menu"
+        class="hidden md:hidden absolute top-full left-0 w-full bg-blue-900/90 backdrop-blur-md transition-all duration-300 z-40"
+      >
+        <ul class="flex flex-col gap-4 p-4 font-medium text-white">
+          <li>
+            <a
+              href="index.html"
+              class="hover:underline block py-2 transition-smooth"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="borrow.html"
+              class="hover:underline block py-2 transition-smooth"
+              >Borrow</a
+            >
+          </li>
+          <li>
+            <a
+              href="about.html"
+              class="hover:underline block py-2 transition-smooth"
+              >About</a
+            >
+          </li>
+          <li>
+            <a
+              href="contack.html"
+              class="hover:underline block py-2 transition-smooth"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="homework.html"
+              class="hover:underline block py-2 transition-smooth"
+              >Homework</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<script>
-    function submitReview() {
-        let reviewText = document.getElementById("review").value;
-        if (reviewText) {
-            let reviewContainer = document.getElementById("reviews");
-            let newReview = document.createElement("p");
-            newReview.textContent = reviewText;
-            reviewContainer.appendChild(newReview);
-            document.getElementById("review").value = "";
-        } else {
-            alert("Ulasan tidak boleh kosong!");
-        }
-    }
-</script>
+    <section class="text-center py-20 bg-blue-50 fade-in">
+      <h2 class="text-4xl font-bold mb-4">Welcome to Our Library</h2>
+      <p class="text-lg mb-6">
+        Explore thousands of books, journals, and digital content anytime,
+        anywhere.
+      </p>
+      <a
+        href="#collection"
+        class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-lg text-lg hover:scale-105 transition-transform duration-300"
+        >Browse Collection</a
+      >
+    </section>
 
-<style>
-    textarea {
-        width: 100%;
-        height: 100px;
-        padding: 10px;
-    }
-    button {
-        background: #1e3a8a;
-        color: white;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-    }
-    button:hover {
-        background: #facc15;
-        color: black;
-    }
-</style>
-</body>
-</html
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello World</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color:  #100d40;
-    }
-    nav {
-      background-color: #1e90ff;
-      padding: 15px;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
-    }
-    .container {
-      background-color: white;
-      max-width: 600px;
-      margin: 30px auto;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-    th {
-      background-color: #1e90ff;
-      color: white;
-    }
-    th, td {
-      padding: 10px;
-      text-align: center;
-    }
-    footer {
-      background-color: #1e90ff;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      margin-top: 30px;
-    }
-  </style>
-</head>
-<body>
+    <section id="collection" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center mb-8">Book Collection</h3>
 
-  <nav>
-    <a href="#">🌐 Hello World</a>
-  </nav>
+        <div class="mb-6 text-center">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by title..."
+            class="w-full max-w-md p-2 border rounded transition-smooth"
+            onkeyup="searchBooks()"
+          />
+        </div>
 
-  <div class="container">
-    <h2>Hello World</h2>
-    <p>Ini adalah halaman Hello World pertama saya!</p>
+        <div id="bookList" class="grid md:grid-cols-3 gap-6">
+          <div
+            class="book-item bg-gray-100 p-4 rounded shadow text-center slide-up"
+          >
+            <img
+              src="https://covers.openlibrary.org/b/id/7222246-L.jpg"
+              alt="The Great Gatsby"
+              class="mx-auto mb-4 h-48 transition-transform duration-300 hover:scale-105"
+            />
+            <h4 class="text-xl font-semibold">The Great Gatsby</h4>
+            <p class="text-gray-600">F. Scott Fitzgerald</p>
+          </div>
 
-    <h3>Tabel</h3>
-    <table>
-      <tr>
-        <th>Nama</th>
-        <th>Usia</th>
-        <th>Kota</th>
-      </tr>
-      <tr>
-        <td>Rida</td>
-        <td>22</td>
-        <td>Medan</td>
-      </tr>
-      <tr>
-        <td>Umar</td>
-        <td>27</td>
-        <td>Jakarta</td>
-      </tr>
-    </table>
+          <div
+            class="book-item bg-gray-100 p-4 rounded shadow text-center slide-up"
+            style="animation-delay: 0.2s"
+          >
+            <img
+              src="https://covers.openlibrary.org/b/id/7222241-L.jpg"
+              alt="1984"
+              class="mx-auto mb-4 h-48 transition-transform duration-300 hover:scale-105"
+            />
+            <h4 class="text-xl font-semibold">1984</h4>
+            <p class="text-gray-600">George Orwell</p>
+          </div>
 
-    <h3>Link</h3>
-    <p>Klik <a href="https://www.usu.ac.id" target="_blank">di sini</a> untuk ke situs Universitas Sumatera Utara.</p>
-  </div>
+          <div
+            class="book-item bg-gray-100 p-4 rounded shadow text-center slide-up"
+            style="animation-delay: 0.4s"
+          >
+            <img
+              src="https://covers.openlibrary.org/b/id/8281996-L.jpg"
+              alt="To Kill a Mockingbird"
+              class="mx-auto mb-4 h-48 transition-transform duration-300 hover:scale-105"
+            />
+            <h4 class="text-xl font-semibold">To Kill a Mockingbird</h4>
+            <p class="text-gray-600">Harper Lee</p>
+          </div>
 
-  <footer>
-    © 2025 Perpustakaan husnul khatimah
-  </footer>
+          <div
+            class="book-item bg-gray-100 p-4 rounded shadow text-center slide-up"
+            style="animation-delay: 0.6s"
+          >
+            <img
+              src="https://covers.openlibrary.org/b/id/11153256-L.jpg"
+              alt="Pride and Prejudice"
+              class="mx-auto mb-4 h-48 transition-transform duration-300 hover:scale-105"
+            />
+            <h4 class="text-xl font-semibold">Pride and Prejudice</h4>
+            <p class="text-gray-600">Jane Austen</p>
+          </div>
 
-</body>
+          <div
+            class="book-item bg-gray-100 p-4 rounded shadow text-center slide-up"
+            style="animation-delay: 0.8s"
+          >
+            <img
+              src="https://covers.openlibrary.org/b/id/8231856-L.jpg"
+              alt="Moby-Dick"
+              class="mx-auto mb-4 h-48 transition-transform duration-300 hover:scale-105"
+            />
+            <h4 class="text-xl font-semibold">Moby-Dick</h4>
+            <p class="text-gray-600">Herman Melville</p>
+          </div>
+
+          <div
+            class="book-item bg-gray-100 p-4 rounded shadow text-center slide-up"
+            style="animation-delay: 1s"
+          >
+            <img
+              src="https://covers.openlibrary.org/b/id/8279254-L.jpg"
+              alt="The Catcher in the Rye"
+              class="mx-auto mb-4 h-48 transition-transform duration-300 hover:scale-105"
+            />
+            <h4 class="text-xl font-semibold">The Catcher in the Rye</h4>
+            <p class="text-gray-600">J.D. Salinger</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-700 text-white text-center py-6">
+      <div class="container mx-auto">
+        <p class="text-sm">&copy; 2025 Library Husnul. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+      const icon = document.getElementById("menu-icon");
+
+      let isOpen = false;
+
+      toggle.addEventListener("click", () => {
+        isOpen = !isOpen;
+        menu.classList.toggle("hidden");
+
+        // Toggle icon (hamburger <-> X)
+        icon.innerHTML = isOpen
+          ? `<path fill-rule="evenodd" clip-rule="evenodd" d="M6 18L18 6M6 6l12 12" />`
+          : `<path fill-rule="evenodd" clip-rule="evenodd" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z" />`;
+      });
+    </script>
+
+    <script>
+      function searchBooks() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const items = document.querySelectorAll(".book-item");
+
+        items.forEach((item) => {
+          const title = item.querySelector("h4").innerText.toLowerCase();
+          item.style.display = title.includes(input) ? "block" : "none";
+        });
+      }
+
+      function submitForm(event) {
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        const book = document.getElementById("book").value;
+        const date = document.getElementById("returnDate").value;
+        alert(`Borrower: ${name}\nBook: ${book}\nReturn Date: ${date}`);
+      }
+    </script>
+  </body>
 </html>
